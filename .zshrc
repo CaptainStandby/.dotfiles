@@ -30,6 +30,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 
 # Other
 setopt prompt_subst
+autoload -U compinit; compinit
 autoload -U +X bashcompinit && bashcompinit
 
 

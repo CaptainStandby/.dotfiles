@@ -13,4 +13,3 @@
 [submodule "zsh/theme/spaceship-prompt"]
 	path = zsh/theme/spaceship-prompt
 	url = https://github.com/spaceship-prompt/spaceship-prompt.git
-	shallow = true

@@ -30,6 +30,8 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 
 # Other
 setopt prompt_subst
+autoload -U +X bashcompinit && bashcompinit
+
 
 0=${(%):-%N}
 this_dir="$(dirname "$(readlink -f "$0")")"
@@ -49,6 +51,7 @@ fi
 bindkey ";5C" forward-word
 bindkey ";5D" backward-word
 
+# NPM Stuff
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

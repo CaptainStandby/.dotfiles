@@ -13,3 +13,6 @@
 [submodule "zsh/theme/spaceship-prompt"]
 	path = zsh/theme/spaceship-prompt
 	url = https://github.com/spaceship-prompt/spaceship-prompt.git
+[submodule "zsh/plugins/zsh-nvm"]
+	path = zsh/plugins/zsh-nvm
+	url = https://github.com/lukechilds/zsh-nvm.git

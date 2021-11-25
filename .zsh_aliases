@@ -9,7 +9,7 @@ alias l='ls -CF'
 alias 'cd..'='cd ..'
 
 start-ssh-agent() {
-	eval `ssh-agent`
+	eval "$(ssh-agent)"
 	ssh-add
 }
 alias stop-ssh-agent='ssh-agent -k'

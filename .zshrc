@@ -48,8 +48,11 @@ if [ -f "${this_dir}/.zsh_aliases" ]; then
     source "${this_dir}/.zsh_aliases"
 fi
 
+# Environment Variables
+if [ -f "${this_dir}/.env" ]; then
+    # set -o allexport; source "${this_dir}/.env"; set +o allexport
+fi
+
 # Keybindings
 bindkey ";5C" forward-word
 bindkey ";5D" backward-word
-
-export DOTNET_CLI_TELEMETRY_OPTOUT=1

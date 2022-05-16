@@ -50,7 +50,7 @@ fi
 
 # Environment Variables
 if [ -f "${this_dir}/.env" ]; then
-    # set -o allexport; source "${this_dir}/.env"; set +o allexport
+    set -o allexport; source "${this_dir}/.env"; set +o allexport
 fi
 
 # Keybindings

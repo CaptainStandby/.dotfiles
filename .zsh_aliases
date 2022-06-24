@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -13,3 +15,5 @@ start-ssh-agent() {
 	ssh-add
 }
 alias stop-ssh-agent='ssh-agent -k'
+
+alias aws='docker run --rm -it -u "$(id -u):$(id -g)" -v "$HOME/.aws:/root/.aws" -v "$(pwd):/aws" amazon/aws-cli:2.7.10'

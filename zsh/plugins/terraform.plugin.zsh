@@ -1,5 +1,6 @@
+cmd="${commands[terraform]}"
 
-if [ $commands[terraform] ]; then
-	complete -o nospace -C $commands[terraform] terraform
-	alias tf=terraform
+if [ -x "$cmd" ]; then
+	complete -o nospace -C "$cmd" terraform
+	alias tf="$cmd"
 fi

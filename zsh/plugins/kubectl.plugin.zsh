@@ -1,5 +1,6 @@
+cmd="${commands[kubectl]}"
 
-if [ $commands[kubectl] ]; then
-	source <(kubectl completion zsh)
-	alias k=kubectl
+if [ -x "$cmd" ]; then
+	source <("$cmd" completion zsh)
+	alias k="$cmd"
 fi

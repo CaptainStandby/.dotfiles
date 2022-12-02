@@ -56,3 +56,8 @@ fi
 # Keybindings
 bindkey ";5C" forward-word
 bindkey ";5D" backward-word
+
+# Profile
+if [ -f "$HOME/.zprofile" ]; then
+    source "$HOME/.zprofile"
+fi

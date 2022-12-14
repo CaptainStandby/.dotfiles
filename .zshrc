@@ -38,12 +38,6 @@ autoload -U +X bashcompinit && bashcompinit
 0=${(%):-%N}
 this_dir="$(dirname "$(readlink -f "$0")")"
 
-# Plugins
-source "${this_dir}/zsh/plugins/load_plugins.zsh"
-
-# Theme
-source "${this_dir}/zsh/theme/load_theme.zsh"
-
 # Scripts
 scripts_dir="${this_dir}/scripts/"
 if ! $( echo "$PATH" | tr ":" "\n" | grep -qx "$scripts_dir" ) ; then
@@ -54,6 +48,12 @@ fi
 if [ -f "${this_dir}/.zsh_aliases" ]; then
     source "${this_dir}/.zsh_aliases"
 fi
+
+# Plugins
+source "${this_dir}/zsh/plugins/load_plugins.zsh"
+
+# Theme
+source "${this_dir}/zsh/theme/load_theme.zsh"
 
 # Environment Variables
 if [ -f "${this_dir}/.env" ]; then

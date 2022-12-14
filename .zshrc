@@ -44,6 +44,12 @@ source "${this_dir}/zsh/plugins/load_plugins.zsh"
 # Theme
 source "${this_dir}/zsh/theme/load_theme.zsh"
 
+# Scripts
+scripts_dir="${this_dir}/scripts/"
+if ! $( echo "$PATH" | tr ":" "\n" | grep -qx "$scripts_dir" ) ; then
+    PATH="$PATH:$scripts_dir"
+fi
+
 # Aliases
 if [ -f "${this_dir}/.zsh_aliases" ]; then
     source "${this_dir}/.zsh_aliases"

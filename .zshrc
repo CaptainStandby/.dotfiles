@@ -69,3 +69,7 @@ bindkey ";5D" backward-word
 if [ -f "$HOME/.zprofile" ]; then
     source "$HOME/.zprofile"
 fi
+
+function use-secrets() {
+    set -o allexport; source <(sops -d "${this_dir}/.secrets"); set +o allexport
+}

@@ -31,8 +31,6 @@ zstyle ':completion:*:*:make:*' tag-order 'targets'
 
 # Other
 setopt prompt_subst
-autoload -U compinit; compinit
-autoload -U +X bashcompinit && bashcompinit
 
 
 0=${(%):-%N}
@@ -51,6 +49,9 @@ fi
 
 # Plugins
 source "${this_dir}/zsh/plugins/load_plugins.zsh"
+
+# Completions
+source "${this_dir}/zsh/completions/load_completions.zsh"
 
 # Theme
 source "${this_dir}/zsh/theme/load_theme.zsh"

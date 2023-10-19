@@ -66,8 +66,8 @@ bindkey ";5C" forward-word
 bindkey ";5D" backward-word
 
 # Profile
-if [ -f "$HOME/.zprofile" ]; then
-    source "$HOME/.zprofile"
+if [ -f "$HOME/.profile" ]; then
+    source "$HOME/.profile"
 fi
 
 function use-secrets() {

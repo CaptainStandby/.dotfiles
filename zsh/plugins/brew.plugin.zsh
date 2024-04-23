@@ -14,3 +14,9 @@ if (( ! $+commands[brew] )); then
 	eval "$("$BREW_LOCATION" shellenv)"
 	unset BREW_LOCATION
 fi
+
+brew_cmd="${commands[brew]}"
+if [ -x "$brew_cmd" ]; then
+	FPATH="$($brew_cmd --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+unset brew_cmd

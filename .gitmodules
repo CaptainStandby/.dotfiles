@@ -16,3 +16,6 @@
 [submodule "zsh/plugins/zsh-nvm"]
 	path = zsh/plugins/zsh-nvm
 	url = https://github.com/lukechilds/zsh-nvm.git
+[submodule "zsh/plugins/zsh-abbr"]
+	path = zsh/plugins/zsh-abbr
+	url = https://github.com/olets/zsh-abbr.git
